@@ -1,4 +1,4 @@
-# 集合函子 $G_{\kappa,\theta}$ 精确稳定阶 $\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$ 的证明
+﻿# 集合函子 $G_{\kappa,\theta}$ 精确稳定阶 $\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$ 的证明
 
 ---
 
@@ -16,12 +16,12 @@ $$G_{\kappa,\theta}(X) = \mathcal{P}_{<\kappa}(X) \;\sqcup\; \bigsqcup_{\mu \in 
 - **后继步**：$A_{\alpha+1} = G_{\kappa,\theta}(A_\alpha)$，衔接态射满足 $f_{\alpha+1}^{\beta+1} = G_{\kappa,\theta}(f_\alpha^\beta)$；
 - **极限步**：对极限序数 $\lambda$，$A_\lambda = \varprojlim_{\alpha < \lambda} A_\alpha$ 为相容族 $\bigl\{ (x_\alpha)_{\alpha < \lambda} \in \prod_{\alpha<\lambda} A_\alpha \mid \forall \alpha \le \beta < \lambda,\; f_\alpha^\beta(x_\beta) = x_\alpha \bigr\}$，$f_\alpha^\lambda$ 为第 $\alpha$ 个投影映射。
 
-全体过渡映射满足 $f_\alpha^\alpha = \mathrm{id}$ 与 $f_\alpha^\gamma = f_\alpha^\beta \circ f_\beta^\gamma$（$\alpha \le \beta \le \gamma$）。此外，因 $\emptyset \in \mathcal{P}_{<\kappa}(1)$，恒有 $A_1 \neq \emptyset$，从而对一切序数 $\alpha$ 均有 $A_\alpha \neq \emptyset$。若 $f_\gamma^{\gamma+1}$ 为双射，则称 $G_{\kappa,\theta}$ 在 $\gamma$ 处**稳定**（此时对一切 $\delta \ge \gamma$，$f_\gamma^\delta$ 与 $f_\delta^{\delta+1}$ 均为双射）；使之稳定的最小序数称为精确稳定阶 $\operatorname{Stab}(G_{\kappa,\theta})$。
+全体过渡映射满足 $f_\alpha^\alpha = \mathrm{id}$ 与 $f_\alpha^\gamma = f_\alpha^\beta \circ f_\beta^\gamma$（$\alpha \le \beta \le \gamma$）。此外，因 $\emptyset \in \mathcal{P}_{<\kappa}(1)$，恒有 $A_1 \neq \emptyset$，从而对一切序数 $\alpha$ 均有 $A_\alpha \neq \emptyset$。若 $f_\gamma^{\gamma+1}$ 为双射，则称 $G_{\kappa,\theta}$ 在 $\gamma$ 处**稳定**（此时对一切 $\delta \ge \gamma$，$f_\gamma^\delta$ 与 $f_\delta^{\delta+1}$ 均为双射）；使之稳定的最小序数称为精确稳定阶 $\mathrm{Stab}(G_{\kappa,\theta})$。
 
 ### 命题 0.1（$\kappa$-可及性与保持单射）
 当 $\kappa$ 为无穷正则基数且 $\theta \le \kappa$ 时：
 1. **$G_{\kappa,\theta}$ 保持单射**：若 $h : X \hookrightarrow Y$ 为单射，则 $G_{\kappa,\theta}(h)$ 亦为单射；
-2. **$G_{\kappa,\theta}$ 是 $\kappa$-可及的**：对任意集合 $X$ 与 $u \in G_{\kappa,\theta}(X)$，存在基数 $|Y| < \kappa$ 的子集 $Y \subseteq X$ 使 $u \in \operatorname{im}\bigl(G_{\kappa,\theta}(\iota_{Y \hookrightarrow X})\bigr)$。
+2. **$G_{\kappa,\theta}$ 是 $\kappa$-可及的**：对任意集合 $X$ 与 $u \in G_{\kappa,\theta}(X)$，存在基数 $|Y| < \kappa$ 的子集 $Y \subseteq X$ 使 $u \in \mathrm{im}\bigl(G_{\kappa,\theta}(\iota_{Y \hookrightarrow X})\bigr)$。
 
 **证明**：
 1. 左右不交并分支互不相混。在左分支，若 $h[S_1] = h[S_2]$ 则由 $h$ 单射得 $S_1 = S_2$；在右分支，若 $[h \circ a] = [h \circ b]$，则 $\{ i : a(i) \neq b(i) \} = \{ i : h(a(i)) \neq h(b(i)) \}$ 的基数严格小于 $\mu$，故 $[a] = [b]$。
@@ -38,7 +38,7 @@ $$G_{\kappa,\theta}(X) = \mathcal{P}_{<\kappa}(X) \;\sqcup\; \bigsqcup_{\mu \in 
 
 ---
 
-## 第一阶段（Step 1）：证明 $f_\kappa^{\kappa+1}$ 不满射，从而 $\operatorname{Stab}(G_{\kappa,\theta}) \ge \kappa$
+## 第一阶段（Step 1）：证明 $f_\kappa^{\kappa+1}$ 不满射，从而 $\mathrm{Stab}(G_{\kappa,\theta}) \ge \kappa$
 
 本阶段仅用到左分支 $\mathcal{P}_{<\kappa}(X)$ 与 $\kappa$ 的正则性（对 $\theta$ 无任何额外要求）。
 
@@ -84,7 +84,7 @@ $$q_\alpha(\beta) = q_\alpha(\gamma) \iff \min(\alpha, \beta) = \min(\alpha, \ga
 - **极限步（$\eta$ 为极限序数）**：对一切 $\alpha < \eta$，$f_\alpha^\eta(q_\eta(\beta))$ 按极限投影定义即为第 $\alpha$ 分量 $q_\alpha(\beta)$。$\blacksquare$
 
 ### 1.4 非满射性与第一阶段结论
-令见证元素为 $b_\kappa := q_\kappa(\kappa) \in A_\kappa$。断言 $b_\kappa \notin \operatorname{im}(f_\kappa^{\kappa+1})$。
+令见证元素为 $b_\kappa := q_\kappa(\kappa) \in A_\kappa$。断言 $b_\kappa \notin \mathrm{im}(f_\kappa^{\kappa+1})$。
 
 **证明**：反设存在 $x \in A_{\kappa+1} = G_{\kappa,\theta}(A_\kappa)$ 使 $f_\kappa^{\kappa+1}(x) = b_\kappa$。分两分支导出矛盾：
 - **右分支 $x = \mathsf{R}(\mu, [a])$**：将 $f_\kappa^{\kappa+1}(x) = q_\kappa(\kappa)$ 用 $f_1^\kappa$ 投影到第 $1$ 级。左端为 $f_1^{\kappa+1}(\mathsf{R}(\mu, [a])) = \mathsf{R}(\mu, [f_0^\kappa \circ a])$ 仍落在右分支；右端按引理 2 等于 $q_1(\kappa) = \mathsf{L}(\{*\})$ 落在左分支，矛盾。
@@ -99,10 +99,10 @@ $$q_\alpha(\beta) = q_\alpha(\gamma) \iff \min(\alpha, \beta) = \min(\alpha, \ga
 
 ---
 
-## 第二阶段（Step 2）：下降滤子 $(B_\beta)$、剪枝秩与 $\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$
+## 第二阶段（Step 2）：下降滤子 $(B_\beta)$、剪枝秩与 $\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$
 
 由命题 0.2，$f_\alpha^\beta$ 在全部 $\kappa \le \alpha \le \beta$ 上皆为单射。问题归结为判定何时变为满射。在 $A_\kappa$ 上定义子对象降链（滤子）：
-$$B_0 = A_\kappa, \qquad B_\beta := \operatorname{im}\bigl(f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \to A_\kappa\bigr) \subseteq A_\kappa \qquad (\beta \in \mathrm{Ord}).$$
+$$B_0 = A_\kappa, \qquad B_\beta := \mathrm{im}\bigl(f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \to A_\kappa\bigr) \subseteq A_\kappa \qquad (\beta \in \mathrm{Ord}).$$
 对任意子集 $U \subseteq A_\kappa$，记 $H(U) \subseteq G_{\kappa,\theta}(A_\kappa)$ 为受限于 $U$ 的子函子像集（即 $G_{\kappa,\theta}(U)$ 在 $G_{\kappa,\theta}(A_\kappa)$ 中的自然嵌入像）：
 - 对 $u = \mathsf{L}(S)$，$u \in H(U) \iff S \subseteq U$；
 - 对 $u = \mathsf{R}(\mu, [a])$，$u \in H(U) \iff \exists b \equiv_{<\mu} a,\; \forall i < \mu,\; b(i) \in U \iff \bigl|\{ i < \mu : a(i) \notin U \}\bigr| < \mu$。
@@ -115,11 +115,11 @@ $$B_0 = A_\kappa, \qquad B_\beta := \operatorname{im}\bigl(f_\kappa^{\kappa+\bet
 
 **证明**：
 1. 对 $\beta_1 \le \beta_2$，由 $f_\kappa^{\kappa+\beta_2} = f_\kappa^{\kappa+\beta_1} \circ f_{\kappa+\beta_1}^{\kappa+\beta_2}$ 得 $B_{\beta_2} \subseteq B_{\beta_1}$；因 $A_{\kappa+\beta} \neq \emptyset$ 故 $B_\beta \neq \emptyset$。
-2. 因 $f_{\kappa+1}^{\kappa+\beta+1} = G_{\kappa,\theta}(f_\kappa^{\kappa+\beta})$ 而 $f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \xrightarrow{\sim} B_\beta$（到像集的双射），恰有 $\operatorname{im}(f_{\kappa+1}^{\kappa+\beta+1}) = H(B_\beta)$；再复合 $f_\kappa^{\kappa+1}$ 即得 $B_{\beta+1} = f_\kappa^{\kappa+1}[H(B_\beta)]$。
+2. 因 $f_{\kappa+1}^{\kappa+\beta+1} = G_{\kappa,\theta}(f_\kappa^{\kappa+\beta})$ 而 $f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \xrightarrow{\sim} B_\beta$（到像集的双射），恰有 $\mathrm{im}(f_{\kappa+1}^{\kappa+\beta+1}) = H(B_\beta)$；再复合 $f_\kappa^{\kappa+1}$ 即得 $B_{\beta+1} = f_\kappa^{\kappa+1}[H(B_\beta)]$。
 3. ($\subseteq$) 显然由第 1 条得出。($\supseteq$) 设 $c \in \bigcap_{\beta < l} B_\beta$，即对每个 $\beta < l$ 存在 $x_\beta \in A_{\kappa+\beta}$ 使 $f_\kappa^{\kappa+\beta}(x_\beta) = c$。对任意 $\beta \le \gamma < l$，计算
    $$f_\kappa^{\kappa+\beta}\bigl(f_{\kappa+\beta}^{\kappa+\gamma}(x_\gamma)\bigr) = f_\kappa^{\kappa+\gamma}(x_\gamma) = c = f_\kappa^{\kappa+\beta}(x_\beta),$$
    由命题 0.2（$f_\kappa^{\kappa+\beta}$ 单射）立即自动推出 $f_{\kappa+\beta}^{\kappa+\gamma}(x_\gamma) = x_\beta$！因此 $(x_\beta)_{\beta < l}$ 满足全部中间层相容性（低层 $\alpha < \kappa$ 可由 $x_0 \in A_\kappa$ 往下投影统一补全），从而拼成 $x \in A_{\kappa+l}$ 满足 $f_\kappa^{\kappa+l}(x) = c \in B_l$。
-4. 由 $f_\kappa^{\kappa+\beta}$ 单射，$f_{\kappa+\beta}^{\kappa+\beta+1}(A_{\kappa+\beta+1}) = A_{\kappa+\beta} \iff f_\kappa^{\kappa+\beta}\bigl(\operatorname{im}(f_{\kappa+\beta}^{\kappa+\beta+1})\bigr) = f_\kappa^{\kappa+\beta}(A_{\kappa+\beta}) \iff B_{\beta+1} = B_\beta$。$\blacksquare$
+4. 由 $f_\kappa^{\kappa+\beta}$ 单射，$f_{\kappa+\beta}^{\kappa+\beta+1}(A_{\kappa+\beta+1}) = A_{\kappa+\beta} \iff f_\kappa^{\kappa+\beta}\bigl(\mathrm{im}(f_{\kappa+\beta}^{\kappa+\beta+1})\bigr) = f_\kappa^{\kappa+\beta}(A_{\kappa+\beta}) \iff B_{\beta+1} = B_\beta$。$\blacksquare$
 
 ### 2.2 剪枝秩 $\rho$、延迟算子 $\sigma, \tau_\mu$ 与全体 $< \theta$ 秩的实现
 对 $x \in B_0 = A_\kappa$，若存在序数 $\beta$ 使 $x \in B_\beta \setminus B_{\beta+1}$，称 $\rho(x) = \beta$ 为 $x$ 的**剪枝秩**。由引理 3(4)，存在 $\rho(x) = \beta \iff B_{\beta+1} \subsetneq B_\beta \iff f_{\kappa+\beta}^{\kappa+\beta+1}$ 不满射。
@@ -137,11 +137,11 @@ $$B_0 = A_\kappa, \qquad B_\beta := \operatorname{im}\bigl(f_\kappa^{\kappa+\bet
 
 据此立刻得到以下两个延迟机制：
 - **后继延迟**：若 $\rho(x) = \alpha$（即 $x \in B_\alpha \setminus B_{\alpha+1}$），则 $\rho(\sigma(x)) = \alpha + 1$。
-- **极限延迟**：设 $l < \theta$ 为极限序数，记 $\mu := \operatorname{cof}(l)$。因 $l$ 为极限序数且 $l < \theta$，$\mu$ 是无穷正则基数且 $\mu \le |l| < \theta$，即 $\mu \in \mathrm{Reg}_{<\theta}$。取在 $l$ 中严格递增的共尾序列 $(c_j)_{j<\mu}$。若 $\rho(x_{c_j}) = c_j$ 对一切 $j < \mu$ 成立，令 $x_l := \tau_\mu\bigl((x_{c_j})_{j<\mu}\bigr)$，则 $\rho(x_l) = l$：
+- **极限延迟**：设 $l < \theta$ 为极限序数，记 $\mu := \mathrm{cof}(l)$。因 $l$ 为极限序数且 $l < \theta$，$\mu$ 是无穷正则基数且 $\mu \le |l| < \theta$，即 $\mu \in \mathrm{Reg}_{<\theta}$。取在 $l$ 中严格递增的共尾序列 $(c_j)_{j<\mu}$。若 $\rho(x_{c_j}) = c_j$ 对一切 $j < \mu$ 成立，令 $x_l := \tau_\mu\bigl((x_{c_j})_{j<\mu}\bigr)$，则 $\rho(x_l) = l$：
   1. 对任给 $\beta < l$，由共尾性取 $i_0 < \mu$ 使 $j \ge i_0 \implies c_j \ge \beta \implies x_{c_j} \in B_{c_j} \subseteq B_\beta$；故 $\{j < \mu : x_{c_j} \notin B_\beta\} \subseteq i_0$ 基数 $< \mu$，由引理 4 得 $x_l \in B_{\beta+1} \subseteq B_\beta$，再由引理 3(3) 得 $x_l \in \bigcap_{\beta < l} B_\beta = B_l$。
   2. 反之，对一切 $j < \mu$ 均有 $c_j + 1 < l$，故 $B_l \subseteq B_{c_j+1}$，从而 $x_{c_j} \notin B_{c_j+1} \implies x_{c_j} \notin B_l$。于是 $\{j < \mu : x_{c_j} \notin B_l\} = \mu$ 基数不小于 $\mu$，由引理 4 得 $x_l \notin B_{l+1}$。
 
-**推论（全部 $< \theta$ 秩的实现）**：对一切 $\alpha < \theta$ 作超限归纳（取 $x_0 = b_\kappa \in B_0 \setminus B_1$，后继步用 $\sigma$，极限步用 $\tau_{\operatorname{cof}(l)}$），对每一个 $\alpha < \theta$ 均存在 $x_\alpha \in B_\alpha \setminus B_{\alpha+1}$。特别地，对任意 $\delta = \kappa + \alpha < \kappa + \theta$，$f_\delta^{\delta+1}$ 都不是满射，从而 $\operatorname{Stab}(G_{\kappa,\theta}) \ge \kappa + \theta$。$\blacksquare$
+**推论（全部 $< \theta$ 秩的实现）**：对一切 $\alpha < \theta$ 作超限归纳（取 $x_0 = b_\kappa \in B_0 \setminus B_1$，后继步用 $\sigma$，极限步用 $\tau_{\mathrm{cof}(l)}$），对每一个 $\alpha < \theta$ 均存在 $x_\alpha \in B_\alpha \setminus B_{\alpha+1}$。特别地，对任意 $\delta = \kappa + \alpha < \kappa + \theta$，$f_\delta^{\delta+1}$ 都不是满射，从而 $\mathrm{Stab}(G_{\kappa,\theta}) \ge \kappa + \theta$。$\blacksquare$
 
 ### 2.3 $\theta$-正则闭合与最终收尾：$B_{\theta+1} = B_\theta$
 
@@ -153,18 +153,18 @@ $$\beta_* := \sup_{s \in S} \gamma_s < \theta.$$
 对任意 $s \in S \cap B_{\beta_*}$，若 $s \notin B_\theta$ 则 $\gamma_s \le \beta_* \implies B_{\beta_*} \subseteq B_{\gamma_s} \implies s \in B_{\gamma_s}$，矛盾。故 $S \cap B_{\beta_*} = S \cap B_\theta$。$\blacksquare$
 
 #### 定理（$\theta$ 处闭合与精确稳定阶）
-$B_{\theta+1} = B_\theta$，且 $\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$。
+$B_{\theta+1} = B_\theta$，且 $\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$。
 
-**证明**：只需证 $B_\theta \subseteq B_{\theta+1}$。任取 $x \in B_\theta$。由于 $x \in B_\theta \subseteq B_1 = \operatorname{im}(f_\kappa^{\kappa+1})$，存在唯一 $u \in G_{\kappa,\theta}(A_\kappa)$ 使 $x = f_\kappa^{\kappa+1}(u)$；又对一切 $\beta < \theta$ 均有 $x \in B_\theta \subseteq B_{\beta+1} = f_\kappa^{\kappa+1}[H(B_\beta)]$，结合 $f_\kappa^{\kappa+1}$ 的单射性得 $\forall \beta < \theta,\; u \in H(B_\beta)$。分两分支证明 $u \in H(B_\theta)$：
+**证明**：只需证 $B_\theta \subseteq B_{\theta+1}$。任取 $x \in B_\theta$。由于 $x \in B_\theta \subseteq B_1 = \mathrm{im}(f_\kappa^{\kappa+1})$，存在唯一 $u \in G_{\kappa,\theta}(A_\kappa)$ 使 $x = f_\kappa^{\kappa+1}(u)$；又对一切 $\beta < \theta$ 均有 $x \in B_\theta \subseteq B_{\beta+1} = f_\kappa^{\kappa+1}[H(B_\beta)]$，结合 $f_\kappa^{\kappa+1}$ 的单射性得 $\forall \beta < \theta,\; u \in H(B_\beta)$。分两分支证明 $u \in H(B_\theta)$：
 - **左分支 $u = \mathsf{L}(S)$**：对一切 $\beta < \theta$ 有 $S \subseteq B_\beta$，故 $S \subseteq \bigcap_{\beta < \theta} B_\beta = B_\theta$，从而 $u \in H(B_\theta)$。
-- **右分支 $u = \mathsf{R}(\mu, [a])$**（$\mu < \theta$）：令 $S = \operatorname{im}(a) \subseteq A_\kappa$，则 $|S| \le \mu < \theta$。由引理 5 取 $\beta_* < \theta$ 使 $S \cap B_{\beta_*} = S \cap B_\theta$。由于 $u \in H(B_{\beta_*})$，我们有 $\bigl|\{i < \mu : a(i) \notin B_{\beta_*}\}\bigr| < \mu$。而对任意 $i < \mu$，$a(i) \in S$，故 $a(i) \in B_\theta \iff a(i) \in B_{\beta_*}$。从而
+- **右分支 $u = \mathsf{R}(\mu, [a])$**（$\mu < \theta$）：令 $S = \mathrm{im}(a) \subseteq A_\kappa$，则 $|S| \le \mu < \theta$。由引理 5 取 $\beta_* < \theta$ 使 $S \cap B_{\beta_*} = S \cap B_\theta$。由于 $u \in H(B_{\beta_*})$，我们有 $\bigl|\{i < \mu : a(i) \notin B_{\beta_*}\}\bigr| < \mu$。而对任意 $i < \mu$，$a(i) \in S$，故 $a(i) \in B_\theta \iff a(i) \in B_{\beta_*}$。从而
   $$\{i < \mu : a(i) \notin B_\theta\} = \{i < \mu : a(i) \notin B_{\beta_*}\},$$
   基数仍严格小于 $\mu$，即 $u \in H(B_\theta)$。
 
 由此 $x = f_\kappa^{\kappa+1}(u) \in f_\kappa^{\kappa+1}[H(B_\theta)] = B_{\theta+1}$。
 
 于是 $B_{\theta+1} = B_\theta$，由引理 3(4) 与命题 0.2 即知 $f_{\kappa+\theta}^{\kappa+\theta+1}$ 为双射；配合第一阶段与推论对全部 $\delta < \kappa + \theta$ 的否定，精确稳定阶恰好为
-$$\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta. \qquad \blacksquare$$
+$$\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta. \qquad \blacksquare$$
 
 ---
 
@@ -173,4 +173,4 @@ $$\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta. \qquad \blacksquare$
 取 $\kappa = \theta = \aleph_1$：此时满足 $\mu < \aleph_1$ 的无穷正则基数仅有 $\mu = \aleph_0$，于是
 $$G_{\aleph_1, \aleph_1}(X) = \mathcal{P}_{<\omega_1}(X) \;\sqcup\; \bigl(X^\omega / {\equiv_{\mathrm{fin}}}\bigr),$$
 由上述主定理立即给出其精确稳定阶为
-$$\operatorname{Stab}(G_{\aleph_1, \aleph_1}) = \omega_1 + \omega_1 = \omega_1 \cdot 2.$$
+$$\mathrm{Stab}(G_{\aleph_1, \aleph_1}) = \omega_1 + \omega_1 = \omega_1 \cdot 2.$$

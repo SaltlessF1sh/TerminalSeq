@@ -1,4 +1,4 @@
-# Proof of Exact Stabilization Order $\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$
+﻿# Proof of Exact Stabilization Order $\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$
 
 ---
 
@@ -16,12 +16,12 @@ By transfinite recursion on $\mathrm{Ord}$, the terminal sequence of $G_{\kappa,
 - $A_{\alpha+1} = G_{\kappa,\theta}(A_\alpha)$ with $f_{\alpha+1}^{\beta+1} = G_{\kappa,\theta}(f_\alpha^\beta)$ for $\alpha \le \beta$;
 - for limit ordinals $\lambda$, $A_\lambda = \varprojlim_{\alpha < \lambda} A_\alpha = \bigl\{ (x_\alpha)_{\alpha < \lambda} \in \prod_{\alpha<\lambda} A_\alpha \mid \forall \alpha \le \beta < \lambda,\; f_\alpha^\beta(x_\beta) = x_\alpha \bigr\}$ with $f_\alpha^\lambda$ the $\alpha$-th projection.
 
-The transitions satisfy $f_\alpha^\alpha = \mathrm{id}$ and $f_\alpha^\gamma = f_\alpha^\beta \circ f_\beta^\gamma$ ($\alpha \le \beta \le \gamma$). Moreover, $\emptyset \in \mathcal{P}_{<\kappa}(A_0)$ implies $A_1 \neq \emptyset$, hence $A_\alpha \neq \emptyset$ for all $\alpha$. We say $G_{\kappa,\theta}$ **stabilizes at $\gamma$** if $f_\gamma^{\gamma+1}$ is bijective; the least such ordinal is $\operatorname{Stab}(G_{\kappa,\theta})$.
+The transitions satisfy $f_\alpha^\alpha = \mathrm{id}$ and $f_\alpha^\gamma = f_\alpha^\beta \circ f_\beta^\gamma$ ($\alpha \le \beta \le \gamma$). Moreover, $\emptyset \in \mathcal{P}_{<\kappa}(A_0)$ implies $A_1 \neq \emptyset$, hence $A_\alpha \neq \emptyset$ for all $\alpha$. We say $G_{\kappa,\theta}$ **stabilizes at $\gamma$** if $f_\gamma^{\gamma+1}$ is bijective; the least such ordinal is $\mathrm{Stab}(G_{\kappa,\theta})$.
 
 ### Proposition 0.1 ($\kappa$-Accessibility and Preservation of Injections)
 For infinite regular $\kappa$ and $\theta \le \kappa$:
 1. $G_{\kappa,\theta}$ preserves injective maps;
-2. $G_{\kappa,\theta}$ is $\kappa$-accessible: for every $X$ and $u \in G_{\kappa,\theta}(X)$, there exists $Y \subseteq X$ with $|Y| < \kappa$ such that $u \in \operatorname{im}\bigl(G_{\kappa,\theta}(\iota_{Y \hookrightarrow X})\bigr)$.
+2. $G_{\kappa,\theta}$ is $\kappa$-accessible: for every $X$ and $u \in G_{\kappa,\theta}(X)$, there exists $Y \subseteq X$ with $|Y| < \kappa$ such that $u \in \mathrm{im}\bigl(G_{\kappa,\theta}(\iota_{Y \hookrightarrow X})\bigr)$.
 
 **Proof**:
 1. The two summands stay disjoint. If $h$ is injective, then $h[S_1] = h[S_2] \implies S_1 = S_2$, and $\{i : h(a(i)) \neq h(b(i))\} = \{i : a(i) \neq b(i)\}$, so $[h \circ a] = [h \circ b] \implies [a] = [b]$.
@@ -36,7 +36,7 @@ Now suppose $f_\kappa^{\kappa+1}(x) = f_\kappa^{\kappa+1}(y)$ for $x, y \in A_{\
 
 ---
 
-## Step 1: Non-Surjectivity of $f_\kappa^{\kappa+1}$, Yielding $\operatorname{Stab}(G_{\kappa,\theta}) \ge \kappa$
+## Step 1: Non-Surjectivity of $f_\kappa^{\kappa+1}$, Yielding $\mathrm{Stab}(G_{\kappa,\theta}) \ge \kappa$
 
 This step uses only the bounded powerset summand $\mathcal{P}_{<\kappa}$ and regularity of $\kappa$.
 
@@ -91,10 +91,10 @@ Hence $f_\kappa^{\kappa+1}$ is not surjective, and by upward persistence of stab
 
 ---
 
-## Step 2: Rank Filtration $(B_\beta)$, Pruning Rank, and $\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$
+## Step 2: Rank Filtration $(B_\beta)$, Pruning Rank, and $\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$
 
 Since $f_\alpha^\beta$ is injective for all $\kappa \le \alpha \le \beta$, define the descending filtration on $A_\kappa$:
-$$B_0 = A_\kappa, \qquad B_\beta := \operatorname{im}\bigl(f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \to A_\kappa\bigr) \subseteq A_\kappa \qquad (\beta \in \mathrm{Ord}).$$
+$$B_0 = A_\kappa, \qquad B_\beta := \mathrm{im}\bigl(f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \to A_\kappa\bigr) \subseteq A_\kappa \qquad (\beta \in \mathrm{Ord}).$$
 For $U \subseteq A_\kappa$, write $H(U) \subseteq G_{\kappa,\theta}(A_\kappa)$ for the elements supported in $U$: $\mathsf{L}(S) \in H(U) \iff S \subseteq U$, and $\mathsf{R}(\mu, [a]) \in H(U) \iff \bigl|\{i < \mu : a(i) \notin U\}\bigr| < \mu$.
 
 ### 2.1 Lemma 3 (Basic Properties and Recursion of $B_\beta$)
@@ -105,7 +105,7 @@ For $U \subseteq A_\kappa$, write $H(U) \subseteq G_{\kappa,\theta}(A_\kappa)$ f
 
 **Proof**:
 1. From $f_\kappa^{\kappa+\beta_2} = f_\kappa^{\kappa+\beta_1} \circ f_{\kappa+\beta_1}^{\kappa+\beta_2}$ and $A_{\kappa+\beta} \neq \emptyset$.
-2. Because $f_{\kappa+1}^{\kappa+\beta+1} = G_{\kappa,\theta}(f_\kappa^{\kappa+\beta})$ and $f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \xrightarrow{\sim} B_\beta$, $\operatorname{im}(f_{\kappa+1}^{\kappa+\beta+1}) = H(B_\beta)$; composing with $f_\kappa^{\kappa+1}$ yields $B_{\beta+1} = f_\kappa^{\kappa+1}[H(B_\beta)]$.
+2. Because $f_{\kappa+1}^{\kappa+\beta+1} = G_{\kappa,\theta}(f_\kappa^{\kappa+\beta})$ and $f_\kappa^{\kappa+\beta} : A_{\kappa+\beta} \xrightarrow{\sim} B_\beta$, $\mathrm{im}(f_{\kappa+1}^{\kappa+\beta+1}) = H(B_\beta)$; composing with $f_\kappa^{\kappa+1}$ yields $B_{\beta+1} = f_\kappa^{\kappa+1}[H(B_\beta)]$.
 3. Only ($\supseteq$) is non-trivial. Let $c \in \bigcap_{\beta < l} B_\beta$ and pick $x_\beta \in A_{\kappa+\beta}$ with $f_\kappa^{\kappa+\beta}(x_\beta) = c$ for each $\beta < l$. For any $\beta \le \gamma < l$, $f_\kappa^{\kappa+\beta}\bigl(f_{\kappa+\beta}^{\kappa+\gamma}(x_\gamma)\bigr) = f_\kappa^{\kappa+\gamma}(x_\gamma) = c = f_\kappa^{\kappa+\beta}(x_\beta)$; injectivity of $f_\kappa^{\kappa+\beta}$ automatically forces $f_{\kappa+\beta}^{\kappa+\gamma}(x_\gamma) = x_\beta$. Thus $(x_\beta)_{\beta < l}$ extends to a compatible cone element $x \in A_{\kappa+l}$ with $f_\kappa^{\kappa+l}(x) = c \in B_l$.
 4. Immediate from injectivity of $f_\kappa^{\kappa+\beta}$. $\blacksquare$
 
@@ -124,7 +124,7 @@ For every ordinal $\beta$:
 
 Consequently:
 - If $\rho(x) = \alpha$, then $\rho(\sigma(x)) = \alpha + 1$.
-- If $l < \theta$ is a limit ordinal, let $\mu := \operatorname{cof}(l) \in \mathrm{Reg}_{<\theta}$ ($\mu \le |l| < \theta$) and choose a strictly increasing cofinal sequence $(c_j)_{j<\mu}$ in $l$. If $\rho(x_{c_j}) = c_j$ for all $j < \mu$, then $x_l := \tau_\mu\bigl((x_{c_j})_{j<\mu}\bigr)$ satisfies $\rho(x_l) = l$:
+- If $l < \theta$ is a limit ordinal, let $\mu := \mathrm{cof}(l) \in \mathrm{Reg}_{<\theta}$ ($\mu \le |l| < \theta$) and choose a strictly increasing cofinal sequence $(c_j)_{j<\mu}$ in $l$. If $\rho(x_{c_j}) = c_j$ for all $j < \mu$, then $x_l := \tau_\mu\bigl((x_{c_j})_{j<\mu}\bigr)$ satisfies $\rho(x_l) = l$:
   1. For each $\beta < l$, some $i_0 < \mu$ satisfies $j \ge i_0 \implies c_j \ge \beta \implies x_{c_j} \in B_\beta$, so $\{j < \mu : x_{c_j} \notin B_\beta\} \subseteq i_0$ has cardinality $<\mu$; hence $x_l \in \bigcap_{\beta<l} B_{\beta+1} = B_l$.
   2. For every $j < \mu$, $c_j + 1 < l$ implies $x_{c_j} \notin B_{c_j+1} \supseteq B_l$, so $\{j < \mu : x_{c_j} \notin B_l\} = \mu$ has cardinality $\ge \mu$; hence $x_l \notin B_{l+1}$.
 
@@ -138,13 +138,13 @@ If $S \subseteq A_\kappa$ satisfies $|S| < \theta$, then there exists $\beta_* <
 **Proof**: For each $s \in S \setminus B_\theta$, pick $\gamma_s < \theta$ with $s \notin B_{\gamma_s}$ (using $B_\theta = \bigcap_{\gamma<\theta} B_\gamma$), and set $\gamma_s = 0$ for $s \in S \cap B_\theta$. Since $|S| < \theta$ and $\theta$ is regular, $\beta_* := \sup_{s \in S} \gamma_s < \theta$, giving $S \cap B_{\beta_*} = S \cap B_\theta$. $\blacksquare$
 
 #### Theorem ($\theta$-Closure and Exact Stabilization)
-$B_{\theta+1} = B_\theta$, and therefore $\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$.
+$B_{\theta+1} = B_\theta$, and therefore $\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$.
 
-**Proof**: Let $x \in B_\theta$. Then $x \in B_1 = \operatorname{im}(f_\kappa^{\kappa+1})$, so $x = f_\kappa^{\kappa+1}(u)$ for a unique $u \in G_{\kappa,\theta}(A_\kappa)$, and injectivity of $f_\kappa^{\kappa+1}$ ensures $u \in H(B_\beta)$ for every $\beta < \theta$.
+**Proof**: Let $x \in B_\theta$. Then $x \in B_1 = \mathrm{im}(f_\kappa^{\kappa+1})$, so $x = f_\kappa^{\kappa+1}(u)$ for a unique $u \in G_{\kappa,\theta}(A_\kappa)$, and injectivity of $f_\kappa^{\kappa+1}$ ensures $u \in H(B_\beta)$ for every $\beta < \theta$.
 - **If $u = \mathsf{L}(S)$**: then $S \subseteq \bigcap_{\beta < \theta} B_\beta = B_\theta$, so $u \in H(B_\theta)$.
-- **If $u = \mathsf{R}(\mu, [a])$** ($\mu < \theta$): put $S = \operatorname{im}(a) \subseteq A_\kappa$ ($|S| \le \mu < \theta$). By Lemma 5, choose $\beta_* < \theta$ with $S \cap B_{\beta_*} = S \cap B_\theta$. Then $\{i < \mu : a(i) \notin B_\theta\} = \{i < \mu : a(i) \notin B_{\beta_*}\}$ has cardinality $< \mu$ since $u \in H(B_{\beta_*})$, so $u \in H(B_\theta)$.
+- **If $u = \mathsf{R}(\mu, [a])$** ($\mu < \theta$): put $S = \mathrm{im}(a) \subseteq A_\kappa$ ($|S| \le \mu < \theta$). By Lemma 5, choose $\beta_* < \theta$ with $S \cap B_{\beta_*} = S \cap B_\theta$. Then $\{i < \mu : a(i) \notin B_\theta\} = \{i < \mu : a(i) \notin B_{\beta_*}\}$ has cardinality $< \mu$ since $u \in H(B_{\beta_*})$, so $u \in H(B_\theta)$.
 
-Hence $x = f_\kappa^{\kappa+1}(u) \in B_{\theta+1}$, so $B_{\theta+1} = B_\theta$. By Lemma 3(4) and Proposition 0.2, $f_{\kappa+\theta}^{\kappa+\theta+1}$ is bijective, while no $\delta < \kappa + \theta$ stabilizes. Thus $\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$. $\blacksquare$
+Hence $x = f_\kappa^{\kappa+1}(u) \in B_{\theta+1}$, so $B_{\theta+1} = B_\theta$. By Lemma 3(4) and Proposition 0.2, $f_{\kappa+\theta}^{\kappa+\theta+1}$ is bijective, while no $\delta < \kappa + \theta$ stabilizes. Thus $\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$. $\blacksquare$
 
 ---
 
@@ -152,4 +152,4 @@ Hence $x = f_\kappa^{\kappa+1}(u) \in B_{\theta+1}$, so $B_{\theta+1} = B_\theta
 
 When $\kappa = \theta = \aleph_1$, the unique infinite regular cardinal strictly below $\aleph_1$ is $\aleph_0$, so
 $$G_{\aleph_1, \aleph_1}(X) = \mathcal{P}_{<\omega_1}(X) \;\sqcup\; \bigl(X^\omega / {\equiv_{\mathrm{fin}}}\bigr),$$
-and the theorem yields $\operatorname{Stab}(G_{\aleph_1, \aleph_1}) = \omega_1 + \omega_1 = \omega_1 \cdot 2$.
+and the theorem yields $\mathrm{Stab}(G_{\aleph_1, \aleph_1}) = \omega_1 + \omega_1 = \omega_1 \cdot 2$.

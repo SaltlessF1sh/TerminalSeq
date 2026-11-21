@@ -1,12 +1,12 @@
-# Terminal Sequence Stabilization of Set Functors (Lean 4 Formalization)
+﻿# Terminal Sequence Stabilization of Set Functors (Lean 4 Formalization)
 
 Self-contained **Lean 4 + Mathlib** (`v4.36.0`) formalization and bilingual mathematical proofs covering two results on the transfinite terminal sequence $(A_\alpha, f_\alpha^\beta)$ of endofunctors on $\mathbf{Set}$, with zero `sorry`s and relying only on standard Lean axioms (`propext`, `Classical.choice`, `Quot.sound`):
 
-1. **Part I ($\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$)**: For any infinite regular cardinals $\omega \le \theta \le \kappa$, the terminal sequence of
+1. **Part I ($\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$)**: For any infinite regular cardinals $\omega \le \theta \le \kappa$, the terminal sequence of
    $$G_{\kappa,\theta}(X) = \mathcal{P}_{<\kappa}(X) \;\sqcup\; \bigsqcup_{\substack{\mu < \theta \\ \mu\text{ infinite regular}}} \bigl(X^\mu / {\equiv_{<\mu}}\bigr)$$
    stabilizes at exact ordinal $\kappa + \theta$ (specializing $\kappa = \theta = \aleph_1$ to $\omega_1 + \omega_1 = \omega_1 \cdot 2$).
-2. **Part II ($\omega$-Accessible 4-Point Classification)**: For any $\omega$-accessible (finitary) set endofunctor $F : \mathbf{Set} \to \mathbf{Set}$, $\operatorname{Stab}(F) \neq \alpha + 1$ for every $\alpha \ge 1$ and $\operatorname{Stab}(F) \le \omega + \omega$, yielding the complete classification
-   $$\operatorname{Stab}(F) \in \{0,\; 1,\; \omega,\; \omega + \omega\}.$$
+2. **Part II ($\omega$-Accessible 4-Point Classification)**: For any $\omega$-accessible (finitary) set endofunctor $F : \mathbf{Set} \to \mathbf{Set}$, $\mathrm{Stab}(F) \neq \alpha + 1$ for every $\alpha \ge 1$ and $\mathrm{Stab}(F) \le \omega + \omega$, yielding the complete classification
+   $$\mathrm{Stab}(F) \in \{0,\; 1,\; \omega,\; \omega + \omega\}.$$
 
 ---
 
@@ -38,7 +38,7 @@ Self-contained **Lean 4 + Mathlib** (`v4.36.0`) formalization and bilingual math
 | File | Description |
 | --- | --- |
 | [`TerminalSeq.lean`](TerminalSeq.lean) | Umbrella module re-exporting all developments and running `#print axioms` checks |
-| [`docs/proof_zh.md`](docs/proof_zh.md) / [`docs/proof_en.md`](docs/proof_en.md) | Part I 完整中/英文自然语言证明（$\operatorname{Stab}(G_{\kappa,\theta}) = \kappa + \theta$） |
+| [`docs/proof_zh.md`](docs/proof_zh.md) / [`docs/proof_en.md`](docs/proof_en.md) | Part I 完整中/英文自然语言证明（$\mathrm{Stab}(G_{\kappa,\theta}) = \kappa + \theta$） |
 | [`docs/omega_accessible_zh.md`](docs/omega_accessible_zh.md) / [`docs/omega_accessible_en.md`](docs/omega_accessible_en.md) | Part II 完整中/英文自然语言证明（$\omega$-可达函子的四点收敛分类） |
 
 ---
@@ -56,9 +56,9 @@ Self-contained **Lean 4 + Mathlib** (`v4.36.0`) formalization and bilingual math
 - `TerminalSeq.Abstract.tail_monic_of_accessible` — For regular $\kappa$ and $\kappa$-accessible $F$ with $A_1 \neq \emptyset$, every tail map $f_\alpha^\beta$ ($\kappa \le \alpha \le \beta$) is injective.
 - `TerminalSeq.OmegaAccessible.trnkova_inter` / `singleton_of_disjoint_range` / `stabilizesAt_one_of_section_and_terminal` — Lemmas 1.1, 1.2, and 1.3.
 - `TerminalSeq.OmegaAccessible.terminal_bijective_of_proper_subset_surjective` — Proposition 2.1.
-- `TerminalSeq.OmegaAccessible.not_stabilizes_succ_of_ge_one` — Theorem 2.2: $\forall \alpha \ge 1,\; \operatorname{Stab}(F) \neq \alpha + 1$.
+- `TerminalSeq.OmegaAccessible.not_stabilizes_succ_of_ge_one` — Theorem 2.2: $\forall \alpha \ge 1,\; \mathrm{Stab}(F) \neq \alpha + 1$.
 - `TerminalSeq.OmegaAccessible.stabilizesAt_omega_add_omega` — Worrell upper bound: every $\omega$-accessible $F$ stabilizes by $\omega + \omega$.
-- `TerminalSeq.OmegaAccessible.omega_accessible_stab_four_points` & `stab_mem_four_points` — Exact stabilization ordinal $\operatorname{Stab}(F) \in \{0, 1, \omega, \omega + \omega\}$.
+- `TerminalSeq.OmegaAccessible.omega_accessible_stab_four_points` & `stab_mem_four_points` — Exact stabilization ordinal $\mathrm{Stab}(F) \in \{0, 1, \omega, \omega + \omega\}$.
 
 ---
 
