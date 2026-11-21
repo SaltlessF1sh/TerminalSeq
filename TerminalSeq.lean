@@ -23,7 +23,7 @@ Top-level umbrella module exporting the entire formalization:
 
 ## Part II: Abstract Final-Sequence Infrastructure & 4-Point Classification for `ω`-Accessible Functors
 - `TerminalSeq.Abstract.SetFunctor`: `SetFunctor` (`Type 1 → Type 1`) and `κ`- / `ω`-accessibility
-- `TerminalSeq.Abstract.FinalSequence`: Transfinite terminal sequence `A F α` for arbitrary `SetFunctor`
+- `TerminalSeq.Abstract.FinalSequence`: Terminal sequence `A F α` for arbitrary `SetFunctor`
 - `TerminalSeq.Abstract.Stabilization`: `StabilizesAt`, `Stabilizes`, Lemma 1.4 (`coneMap`), and `tail_monic_of_accessible`
 - `TerminalSeq.OmegaAccessible.TrnkovaLemmas`: Lemmas 1.1–1.3 (Trnková pullback, disjoint support, constant retract)
 - `TerminalSeq.OmegaAccessible.Classification`: Proposition 2.1, Theorem 2.2 (`∀ α ≥ 1, Stab(F) ≠ α + 1`),
